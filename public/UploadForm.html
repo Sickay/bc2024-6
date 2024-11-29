@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            font-size: 16px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a New Note</h1>
+    <form method="POST" action="/write">
+        <label for="note_name">Note Name:</label><br>
+        <input type="text" id="note_name" name="note_name" required><br><br>
+        
+        <label for="note">Note Text:</label><br>
+        <textarea id="note" name="note" required></textarea><br><br>
+        
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
